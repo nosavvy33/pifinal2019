@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro de medicina</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table class="table-form">
+    <tr>
+  <h4>Información del medicamento</h4>
+  <p class="grey_color">
+    Nombre Comercial
+  </p>
+</tr>
+<tr>
+  <ion-searchbar
+  [(ngModel)]="port"
+  show-cancel="true" 
+  placeholder="Buscar medicamento"
+  (keyup)="filter($event)"
+  >
+  </ion-searchbar>
+  <div *ngIf="hasText">
+  <ion-list >
+    <ion-item *ngFor="let item of ports">
+      {{ item.name }}
+    </ion-item>
+  </ion-list>
+  </div>
+</tr>
+<tr>
+  <td class="grey_color">Marca o farmacéutica</td>
+  <td><input type="text"></td>
+</tr>
+<hr>
+<tr>
+  <b>Información de las tomas</b>
+</tr>
+<tr>
+  <p class="grey_color">Frecuencia diaria de la toma</p>
+  <br>
+  <ion-item>
+      <ion-range [(ngModel)]="frecuencia" min="1" max="20" step="1" snaps="true" (ionChange)="cambiarFrecuencia()">
+          <ion-label slot="start">{{frecuencia}} {{medida}}</ion-label>
+      </ion-range>
+    </ion-item>
+</tr>
+<tr>
+  <td><p class="grey_color">Cantidad de tomas</p></td>
+  <td><input type="text"></td>
+</tr>
+<tr>
+    <td><p class="grey_color">Toma eventual</p></td>
+    <td><input type="text"></td>
+  </tr>
+  <tr>
+    <button class="blue-button">Añadir</button>
+  </tr>
+</table>
+</ion-content>
+
+

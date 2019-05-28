@@ -1,0 +1,53 @@
+.card-custom{
+    border-radius: 10px; 
+    height: 20vh; 
+    width: 90vw;
+}
+
+.table_inside_card{
+    width: 70vw; 
+    margin-left: 25px;
+}
+
+.cell_space_5px{
+    border-spacing: 5px !important;
+}
+
+.margin_top_2vh{
+    margin-top: 2vh;
+}
+
+.first_rows{
+    width: 90% !important;
+}
+
+.grey_color{
+    color: #908F8F;
+}
+
+tbody{
+    width: 100%;
+}
+
+.blue_text{
+    color: #3c54a4;
+}
+
+.blue-button{
+    color: #ffffff;
+    background-color: #3c54a4;
+    border-radius: 50px;
+    width: 50vw;
+    height: 9vh;
+    font-size: 2.2em;
+}
+
+.table-form {
+    margin-right: 5vw; margin-left: 5vw; width: 90vw; height: 90vh;
+}
+
+.table-form > tr{
+    align-self: center;
+    padding-right: 5vw;
+    width: 100%;
+}
